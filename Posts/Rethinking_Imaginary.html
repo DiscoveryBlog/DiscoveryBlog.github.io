@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Rethinking Imaginary</title>
+  <link rel="stylesheet" href="tufte.css"/>
+  <link rel="stylesheet" href="latex.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <article>
+    <h1>Rethinking Imaginary</h1>
+    <p class="subtitle">Andy Toulis</p>
+    <section>
+      <h2>Introduction</h2>
+      <p>The complex number system is often taught by introducing &radic;<span style="text-decoration: overline">-1</span>.</p>
+      <p>There is a lot of meaning lost in this notation. As a result, many are left wondering if imaginary numbers actually exist. The name "imaginary" doesn't help either.</p>
+      <p>Today, I hope to better explain the complex number system and set the stage for other natural extensions of numbers like the quarternions.</p>
+    </section>
+
+    <section>
+      <h2>Visualizing Numbers</h2>
+	  <p>We become so accustomed to real numbers — integers, fractions, square roots — that we may forget what they look like.</p>
+	  <p>They live on a line. The magnitude of a number defines how far we are on the line, and the sign indicates our direction from the origin.<p>
+	  
+      <figure>
+        <label 	for="real_line" 
+						class="margin-toggle">&#8853;</label> <input type="checkbox" 
+				id="real_line" 
+						class="margin-toggle"/> <span class="marginnote">
+				The real number line.
+						</span>
+        <img src="img/real_line.jpg"/>
+      </figure>
+   </section>
+
+   <section>
+      <h2>A 2 Dimensional Number System</h2>
+	  <p>One variable will describe how far we are from the origin, just as before. Let's call this the <strong>radius</strong>.</p>
+	  <p>On the other hand, it is no longer possible to describe every direction by using positive and negative signs.<p>
+	  <p>Instead, we will use a second variable to measure the <strong>angle</strong> of our direction from the origin.<p>
+	  <p>Let's agree on the below convention for our system:<p>
+
+      <figure>
+        <label 	for="polar" 
+						class="margin-toggle">&#8853;</label> <input type="checkbox" 
+				id="polar" 
+						class="margin-toggle"/> <span class="marginnote">
+				A 2D system.
+						</span>
+        <img src="img/polar.jpg"/>
+      </figure>
+	  
+	  <p>In this system, we will let the horizontal axis be the real line.</p>
+	  <p>When the angle is zero, we are on the positive side of the real line. When the angle is 180 degrees, we are on the negative side.</p>
+   </section>
+   
+   <section>
+      <h2>Adding</h2>
+	  <p>To add numbers in our system, connect lines together.</p>
+
+      <figure>
+        <label 	for="addition" 
+						class="margin-toggle">&#8853;</label> <input type="checkbox" 
+				id="addition" 
+						class="margin-toggle"/> <span class="marginnote">
+				Add by connecting lines.
+						</span>
+        <img src="img/addition.png"/>
+      </figure>
+	  
+	  <p>As an analogy, imagine walking in some direction for a period of time. When you decide to change directions, your final position can be found by connecting your paths together.</p>
+	  <p>Since the lines are not going in the same direction, the final distance from the origin is not just the sum of the length of the two lines. Instead, the result obeys laws of triangles.</p>
+   </section>
+
+   <section>
+      <h2>Scaling</h2>
+	  <p>Let's take a hint from 1D. When we want to compress or extend a number on the real line, we multiply it by a real number.</p>
+	  <p>Therefore, to scale any number in its given direction, we will multiply by a real number.</p>
+
+      <figure>
+        <label 	for="multiples" 
+						class="margin-toggle">&#8853;</label> <input type="checkbox" 
+				id="multiples" 
+						class="margin-toggle"/> <span class="marginnote">
+				Multiplying a 2D point by a real number.
+						</span>
+        <img src="img/multiples.png"/>
+      </figure>
+	  
+   </section>
+   
+   <section>
+    <h2>Rotation</h2>
+	<p>Let's add rotation into our system.</p>
+	<p>With rotation at our disposal, any position is just a real number rotated to a desired degree.</p>
+
+    <figure>
+        <label 	for="complex_rotation" 
+						class="margin-toggle">&#8853;</label> <input type="checkbox" 
+				id="complex_rotation" 
+						class="margin-toggle"/> <span class="marginnote">
+					Rotating a number in 2D.
+						</span>
+			<img src="img/complex_rotation.jpg"/>
+    </figure>
+	  
+	<p>This allows us to decompose any point. For example:</p>
+	  
+	<ul>Point 1&deg Rotated = (Point on Real Line)&times(1&deg Rotation)</ul>
+	  
+	<p>It is important that rotation acts the same every time, no matter which way we are currently facing.</p>
+	<p>So we expect that repeating the rotation again would only add one extra degree:</p>
+
+	<ul>Point 2&deg Rotated = (Point on Real Line)&times(1&deg Rotation)<sup>2</sup></ul>
+	  
+	<p>In other words, multiplying rotations should have an <strong>additive</strong> effect to angles.</p>
+	</section>
+
+
+   <section>
+		<h2>Back to the Imaginary</h2>
+		<p>Now we can try understand the meaning behind &radic;<span style="text-decoration: overline">-1</span>.</p>
+		<p>If we multiply by one degree 180 times, we make a full 180 turn and end up on the negative side of the real line:</p>
+
+		<ul>Negative Point = (Positive Point)&times(1&deg Rotation)<sup>180</sup></ul>
+
+		<p>A 1&deg rotation is not the square root of negatives. It is the 180<sup>th</sup> root!</p>
+		<p>Similarly, a rotation 90 degrees from the origin could be squared to reach 180 degrees:</p>
+		
+		<ul>Negative Point = (Positive Point)&times(90&deg Rotation)<sup>2</sup></ul>
+
+		<p>Therefore, the square root of negatives in our system is a 90&deg rotation.</p>
+
+		<figure>
+			<label 	for="rotate" 
+							class="margin-toggle">&#8853;</label> <input type="checkbox" 
+					id="rotate" 
+							class="margin-toggle"/> <span class="marginnote">
+						Rotating from positive to negative.
+							</span>
+					<img src="img/rotate.png"/>
+		</figure>
+	  
+	</section>
+	
+   <section>
+		<h2>A Missing Detail</h2>
+		<p>When we rotated, we used a unit for rotation, but didn't define it precisely. Now we will solidify this idea.</p>
+		<p>It is important to remember that when we multiply two real numbers, their values scale in a normal way. We didn't change this.</p>
+
+		<p>Since every point can be broken down into a radius and its rotation, the multiplication of two points can also be broken down:</p>
+		
+		<ul>A = 10&times(1&deg Rotation)<sup>3</sup></ul>
+		<ul>B = 5&times(1&deg Rotation)<sup>10</sup></ul>
+	
+		<p>Then:</p>
+		<ul>A&timesB = 10&times(1&deg Rotation)<sup>3</sup>&times5&times(1&deg Rotation)<sup>10</sup></ul>
+		<ul>A&timesB = 50&times(1&deg Rotation)<sup>13</sup></ul>
+		
+		<figure>
+			<label 	for="multiply" 
+							class="margin-toggle">&#8853;</label> <input type="checkbox" 
+					id="multiply" 
+							class="margin-toggle"/> <span class="marginnote">
+						Multiplication of any two points.
+							</span>
+					<img src="img/multiply.png"/>
+		</figure>
+
+  		<p>In summary, angles add and radii multiply.</p>
+	</section>
+
+   <section>
+		<h2>Repeated Multiplication</h2>
+		<p>If we multiply a number by itself over and over, we get an image like this, with increasingly growing radius at a steady rate of rotation.</p>
+		
+		<figure>
+			<label 	for="complexExponential" 
+							class="margin-toggle">&#8853;</label> <input type="checkbox" 
+					id="complexExponential" 
+							class="margin-toggle"/> <span class="marginnote">
+						Exponentiation adds angles and multiplies radii.
+							</span>
+					<img src="img/complexExponential.png"/>
+		</figure>
+
+  		<p>Therefore, a number purely for rotation would need a radius of 1, since 1x1 = 1.</p>
+	</section>
+
+
+   <section>
+		<h2>The Square Root of Negative One</h2>
+		<p>As a result of the previous section, the exact square root of -1 would be a line with a radius of 1 that was rotated by ninety degrees:</p>
+
+		<ul>1&times(90&deg Rotation)&times1&times(90&deg Rotation) = 1&times(180&deg Rotation) = -1</ul>
+
+		<p>Textbooks commonly refer to this number as <strong>i</strong>.</p>
+
+	</section>
+
+   <section>
+		<h2>Our System in Nature</h2>
+		<p>Some readers may recognize the spiral from the previous section.</p>
+		<p>It turns out that our system shows up everywhere in nature:</p>
+
+		<figure>
+			<label 	for="logarithmic_spiral" 
+							class="margin-toggle">&#8853;</label> <input type="checkbox" 
+					id="logarithmic_spiral" 
+							class="margin-toggle"/> <span class="marginnote">
+						There is a deep connection between exponentiation and balance in our world.
+							</span>
+					<img src="img/logarithmic_spiral.jpg"/>
+		</figure>
+
+	</section>
+
+   <section>
+		<h2>Converting to a Coordinate System</h2>
+		<p>The 2D system introduced with a radius and angle is formally known as the <strong>polar coordinates</strong> and has applications beyond the complex numbers since it simplifies working with circles and spheres.</p>
+		<p>The polar coordinate system can be converted into the typical, textbook way of working with complex numbers by splitting the radius into its horizontal and vertical coordinates.</p>
+		<p>Since we found out that <strong>i</strong> is unit length on the vertical axis, this means that any 2D point has a component that is real and a component that is made up of i.</p>
+
+		<figure>
+			<label 	for="Euler" 
+							class="margin-toggle">&#8853;</label> <input type="checkbox" 
+					id="Euler" 
+							class="margin-toggle"/> <span class="marginnote">
+						Thinking about our system in coordinates. We label the unit 90 degree rotation as i.
+							</span>
+					<img src="img/Euler.png"/>
+		</figure>
+
+	</section>
+
+   <section>
+		<h2>Conclusion</h2>
+		<p>We now have a different view of what it means to be negative, in terms of <strong>angles</strong> rather than sign.</p>
+		<p>To find a square root of a negative, we need a new definition of multiplication which includes <strong>rotation</strong>.</p>
+		<p>With a new definition of multiplication, exponentiation is also redefined. Not only can exponentiation repeat multiplication, it can also repeat rotations.</p>
+		<p>All together, this makes the complex number system an excellent tool for describing phenomena in two dimensions.</p>
+		<p>Most importantly, we found out that our natural world is filled with complex numbers.</p>
+
+		<figure>
+			<label 	for="flower" 
+							class="margin-toggle">&#8853;</label> <input type="checkbox" 
+					id="flower" 
+							class="margin-toggle"/> <span class="marginnote">
+						A rose outlined by exponentiation in our system.
+							</span>
+					<img src="img/flower.jpg"/>
+		</figure>
+
+	</section>
+
+	<section>
+		<h2>Future Work</h2>
+		<p>In future posts, we will talk about the connection between complex numbers and fractals.</p>
+
+		<figure>
+			<label 	for="mandelbrot" 
+							class="margin-toggle">&#8853;</label> <input type="checkbox" 
+					id="mandelbrot" 
+							class="margin-toggle"/> <span class="marginnote">
+						A fractal world called the Mandelbrot set. <a href=" http://entheogen02.deviantart.com/">Credit</a> to online artist entheogen02.
+							</span>
+					<img src="img/mandelbrot.jpg"/>
+		</figure>
+
+		<p>Your <a href="https://www.facebook.com/funSimpleDiscoveries/">feedback</a> is appreciated!</p>
+	</section>
+
+    
+  </article>
+</body>
+</html>
