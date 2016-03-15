@@ -13,13 +13,13 @@
     <section>
       <h2>Introduction</h2>
       <p>The complex number system is often taught by introducing &radic;<span style="text-decoration: overline">-1</span>.</p>
-      <p>There is a lot of meaning lost in this notation. As a result, many are left wondering if imaginary numbers actually exist. The name "imaginary" doesn't help either.</p>
-      <p>Today, I hope to better explain the complex number system and set the stage for other natural extensions of numbers like the Quarternions.</p>
+      <p>A lot of meaning is lost in this notation. As a result, we are left wondering if imaginary numbers actually exist. The name doesn't help either.</p>
+      <p>Today, I hope to better explain the number system. No prior knowledge is required!</p>
     </section>
 
     <section>
       <h2>Visualizing Numbers</h2>
-	  <p>We become so accustomed to real numbers — integers, fractions, square roots — that we may forget what they look like.</p>
+	  <p>We become so accustomed to numbers that we may forget what they look like.</p>
 	  <p>They live on a line. The magnitude of a number defines how far we are on the line, and the sign indicates our direction from the origin.<p>
 	  
       <figure>
@@ -27,7 +27,7 @@
 						class="margin-toggle">&#8853;</label> <input type="checkbox" 
 				id="real_line" 
 						class="margin-toggle"/> <span class="marginnote">
-				The real number line.
+				The number line.
 						</span>
         <img src="img/Rethinking_Imaginary/real_line.jpg"/>
       </figure>
@@ -35,7 +35,7 @@
 
    <section>
       <h2>A 2 Dimensional Number System</h2>
-	  <p>In 2D, one variable can describe how far we are from the origin, just like before. Let's call this the <strong>radius</strong>.</p>
+	  <p>In 2D, we can use a variable to describe how far we are from the origin, just like before. Let's call this the <strong>radius</strong>.</p>
 	  <p>On the other hand, it is no longer possible to describe every direction by using positive and negative signs.<p>
 	  <p>Instead, we will use a second variable to measure the <strong>angle</strong> of our direction from the origin.<p>
 	  <p>Let's agree on the below convention for our system:<p>
@@ -50,8 +50,8 @@
         <img src="img/Rethinking_Imaginary/polar.jpg"/>
       </figure>
 	  
-	  <p>In this system, we will let the horizontal axis be the real line.</p>
-	  <p>When the angle is zero, we are on the positive side of the real line. When the angle is 180 degrees, we are on the negative side.</p>
+	  <p>In this system, we will let the horizontal axis be the line from our 1D system.</p>
+	  <p>When the angle is zero, we are on the positive side of the 1D line. When the angle is 180 degrees, we are on the negative side.</p>
    </section>
    
    <section>
@@ -68,21 +68,24 @@
         <img src="img/Rethinking_Imaginary/addition.png"/>
       </figure>
 	  
-	  <p>As an analogy, imagine walking in some direction for a period of time. When you decide to change directions, your final position can be found by connecting your paths together.</p>
+	  <p>As an analogy, imagine walking in some direction for a period of time. When you decide to change directions, your final position is found by connecting your paths together.</p>
 	  <p>Since the lines are not going in the same direction, the final distance from the origin is not just the sum of the length of the two lines. Instead, the result obeys laws of triangles.</p>
    </section>
 
    <section>
       <h2>Scaling</h2>
-	  <p>Let's take a hint from 1D. When we want to compress or extend a number on the real line, we multiply it by a real number.</p>
-	  <p>Therefore, to scale any number in its given direction, we will multiply by a real number.</p>
+	  <p>Let's take a hint from 1D.</p>
+	  <p>When we want to extend (or compress) a number, we multiply it by a number:</p>
+	  <ul>5&times2=10</ul>
+	  
+	  <p>Therefore, to scale any point, in its given direction, we will multiply by a regular number.</p>
 
       <figure>
         <label 	for="multiples" 
 						class="margin-toggle">&#8853;</label> <input type="checkbox" 
 				id="multiples" 
 						class="margin-toggle"/> <span class="marginnote">
-				Multiplying a 2D point by a real number.
+				Scaling a 2D point.
 						</span>
         <img src="img/Rethinking_Imaginary/multiples.png"/>
       </figure>
@@ -92,7 +95,7 @@
    <section>
     <h2>Rotation</h2>
 	<p>Let's add rotation into our system.</p>
-	<p>With rotation at our disposal, any position is just a real number rotated to a desired degree.</p>
+	<p>With rotation at our disposal, any position is just a point on our 1D line rotated to a desired degree:</p>
 
     <figure>
         <label 	for="complex_rotation" 
@@ -106,21 +109,26 @@
 	  
 	<p>This allows us to decompose any point. For example:</p>
 	  
-	<ul>Point 1&deg Rotated = (Point on Real Line)&times(1&deg Rotation)</ul>
-	  
+	<ul>Point 1&deg Rotated = (Point on 1D Line)&times(1&deg Rotation)</ul>
+	</section>
+	
+	<section>
+    <h2>Consistency</h2>
+
 	<p>It is important that rotation acts the same every time, no matter which way we are currently facing.</p>
+		
 	<p>So we expect that repeating the rotation again would only add one extra degree:</p>
 
-	<ul>Point 2&deg Rotated = (Point on Real Line)&times(1&deg Rotation)<sup>2</sup></ul>
+	<ul>Point 2&deg Rotated = (Point on 1D Line)&times(1&deg Rotation)<sup>2</sup></ul>
 	  
-	<p>In other words, multiplying rotations should have an <strong>additive</strong> effect to angles.</p>
+	<p>In other words, rotations <strong>add</strong>.</p>
 	</section>
 
 
    <section>
 		<h2>Back to the Imaginary</h2>
 		<p>Now we can try understand the meaning behind &radic;<span style="text-decoration: overline">-1</span>.</p>
-		<p>If we multiply by one degree 180 times, we make a full 180 turn and end up on the negative side of the real line:</p>
+		<p>If we multiply by one degree 180 times, we make a full 180 turn and end up on the negative side of the 1D line:</p>
 
 		<ul>Negative Point = (Positive Point)&times(1&deg Rotation)<sup>180</sup></ul>
 
@@ -145,8 +153,10 @@
 	
    <section>
 		<h2>A Missing Detail</h2>
-		<p>When we rotated, we used a unit for rotation, but didn't define it precisely. Now we will solidify this idea.</p>
-		<p>Remember that when we multiply two real numbers, their values scale in a regular way.</p>
+		<p>When we rotated, we used a unit for rotation, but didn't define it. Now we will solidify this idea.</p>
+		<br>
+		<p>Remember that when we multiply two 1D numbers, their values scale in a regular way:</p>
+		<ul>5&times2=10</ul>
 
 		<p>Since every point can be broken down into a radius and a rotation, the product of two points can also be broken down:</p>
 		
@@ -172,25 +182,25 @@
 
    <section>
 		<h2>Repeated Multiplication</h2>
-		<p>If we multiply a number by itself over and over, we get an image like this, with increasingly growing radius at a steady rate of rotation.</p>
+		<p>If we multiply a number by itself over and over, we get a pattern like this, with increasingly growing radius at a steady rate of rotation.</p>
 		
 		<figure>
 			<label 	for="complexExponential" 
 							class="margin-toggle">&#8853;</label> <input type="checkbox" 
 					id="complexExponential" 
 							class="margin-toggle"/> <span class="marginnote">
-						Exponentiation adds angles and multiplies radii.
+						Angles add and radii multiply, creating an expanding spiral.
 							</span>
 					<img src="img/Rethinking_Imaginary/complexExponential.png"/>
 		</figure>
 
-  		<p>Therefore, a number purely for rotation would need a radius of 1, since 1x1 = 1.</p>
+  		<p>Therefore, a number purely for rotation would need a radius of 1, since angles will add up while the radius will stay at 1&times1 = 1.</p>
 	</section>
 
 
    <section>
 		<h2>The Square Root of Negative One</h2>
-		<p>As a result of the previous section, the exact square root of -1 would be a point with a radius of 1 that was rotated by ninety degrees:</p>
+		<p>As a result of the previous section, the square root of -1 would be a point with a radius of 1 that was rotated by ninety degrees:</p>
 
 		<ul>1&times(90&deg Rotation)&times1&times(90&deg Rotation) = 1&times(180&deg Rotation) = -1</ul>
 
@@ -220,14 +230,14 @@
 		<p>Using a radius and an angle to describe two dimensions is called a <strong>polar coordinate</strong> system.</p>
 		<p>This system has applications beyond the complex numbers since it simplifies working with circles, spirals and spheres — fundamental objects in our world.</p>
 		<p>Polar coordinates can be converted into the typical, textbook way of working with complex numbers by splitting the radius into its horizontal and vertical components.</p>
-		<p>Since we found out that <strong>i</strong> is unit length on the vertical axis, this means that any 2D point has a component that is real and a component that is made up of i.</p>
+		<p>Since we found out that <strong>i</strong> is unit length on the vertical axis, this means that any 2D point has a component that is made up of regular numbers and a component that is made up of i.</p>
 
 		<figure>
 			<label 	for="Euler" 
 							class="margin-toggle">&#8853;</label> <input type="checkbox" 
 					id="Euler" 
 							class="margin-toggle"/> <span class="marginnote">
-						Thinking about our system in coordinates. We label the unit 90 degree rotation as i.
+						Thinking about our system in horizontal and vertical components.
 							</span>
 					<img src="img/Rethinking_Imaginary/Euler.png"/>
 		</figure>
@@ -270,8 +280,26 @@
 		</figure>
 
 		<p>Thanks for reading my first post. Your <a href="https://www.facebook.com/funSimpleDiscoveries/">feedback</a> and questions are appreciated!</p>
+		<br>
+		<br>
 	</section>
-
+	
+	
+	<section>
+		<h2>Extra</h2>
+		
+		<p>So you might be wondering: Why do we <strong>multiply</strong> rotations to begin with?</p>
+		<p>The answer is because we chose to and it worked!</p>
+		<p>This is exactly why there is no meaning in the notation &radic;<span style="text-decoration: overline">-1</span>.</p>
+		<p>The only way this notation works is if we decide to extend our definition of multiplication (and thus exponentiation) to include rotations<p>.
+		
+		<br>
+		<br>
+		
+		<p>Lastly, I said that rotations should act the same no matter where a point is. When we spin a pencil in real life, its direction doesn't change how much it spins. But there is even more reason for this.</p>
+		<p>Consistency is really important when trying to add something new to a system. Our goal is to create predictable behaviours to work with so we can model our world.</p>
+		<p>Also remember, we could have taken a different direction to be the 1D line when we introduced our system. We want things to work the same no matter what convention we choose, so direction shouldn't matter!</p>		
+	</section>
     
   </article>
 </body>
