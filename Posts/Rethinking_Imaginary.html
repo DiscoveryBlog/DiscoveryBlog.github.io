@@ -195,6 +195,8 @@
 		</figure>
 
   		<p>Therefore, a number purely for rotation would need a radius of 1, since angles will add up while the radius will stay at 1&times1 = 1.</p>
+  		<p>Similarly, 1D numbers are purely for scaling since adding an angle of zero causes no rotation.</p>
+		
 	</section>
 
 
@@ -294,11 +296,28 @@
 		<p>The only way this notation works is if we decide to extend our definition of multiplication (and thus exponentiation) to include rotations<p>.
 		
 		<br>
+		<p>I also said that rotations should act the same no matter where a point is. Why?</p>
+		<p>Consistency is really important when trying to introduce something new into a system. Without consistency, we wouldn't be able to predict results.</p>
+		<p>Remember, we could have taken a different direction to be the 1D line when we introduced our system. We want things to work the same no matter what convention we choose, so direction shouldn't matter!</p>		
+
+		<br>
+		<br>
+		<p>Lastly, one detail I skipped is that numbers with a radius less than one will shrink faster and faster rather than grow:</p>
+		
+				<figure>
+			<label 	for="complexExponential" 
+							class="margin-toggle">&#8853;</label> <input type="checkbox" 
+					id="complexExponential" 
+							class="margin-toggle"/> <span class="marginnote">
+						A radius less than one will continue to shrink.
+							</span>
+					<img src="img/Rethinking_Imaginary/complexExponential2.png"/>
+		</figure>
+		<p>This is just like how a number less than one gets smaller and smaller when multiplied by itself.</p>
+		
+		<br>
 		<br>
 		
-		<p>Lastly, I said that rotations should act the same no matter where a point is. When we spin a pencil in real life, its direction doesn't change how much it spins. But there is even more reason for this.</p>
-		<p>Consistency is really important when trying to add something new to a system. Our goal is to create predictable behaviours to work with so we can model our world.</p>
-		<p>Also remember, we could have taken a different direction to be the 1D line when we introduced our system. We want things to work the same no matter what convention we choose, so direction shouldn't matter!</p>		
 	</section>
     
   </article>
