@@ -10,12 +10,11 @@
 <body>
   <article>
     <h1>Rethinking Imaginary</h1>
-    <p class="subtitle">Andy Toulis</p>
     <section>
       <h2>Introduction</h2>
       <p>The complex number system is often taught by introducing &radic;<span style="text-decoration: overline">-1</span>.</p>
       <p>There is a lot of meaning lost in this notation. As a result, many are left wondering if imaginary numbers actually exist. The name "imaginary" doesn't help either.</p>
-      <p>Today, I hope to better explain the complex number system and set the stage for other natural extensions of numbers like the quarternions.</p>
+      <p>Today, I hope to better explain the complex number system and set the stage for other natural extensions of numbers like the Quarternions.</p>
     </section>
 
     <section>
@@ -30,13 +29,13 @@
 						class="margin-toggle"/> <span class="marginnote">
 				The real number line.
 						</span>
-        <img src="img/real_line.jpg"/>
+        <img src="img/Rethinking_Imaginary/real_line.jpg"/>
       </figure>
    </section>
 
    <section>
       <h2>A 2 Dimensional Number System</h2>
-	  <p>One variable will describe how far we are from the origin, just as before. Let's call this the <strong>radius</strong>.</p>
+	  <p>In 2D, one variable can describe how far we are from the origin, just like before. Let's call this the <strong>radius</strong>.</p>
 	  <p>On the other hand, it is no longer possible to describe every direction by using positive and negative signs.<p>
 	  <p>Instead, we will use a second variable to measure the <strong>angle</strong> of our direction from the origin.<p>
 	  <p>Let's agree on the below convention for our system:<p>
@@ -48,7 +47,7 @@
 						class="margin-toggle"/> <span class="marginnote">
 				A 2D system.
 						</span>
-        <img src="img/polar.jpg"/>
+        <img src="img/Rethinking_Imaginary/polar.jpg"/>
       </figure>
 	  
 	  <p>In this system, we will let the horizontal axis be the real line.</p>
@@ -66,7 +65,7 @@
 						class="margin-toggle"/> <span class="marginnote">
 				Add by connecting lines.
 						</span>
-        <img src="img/addition.png"/>
+        <img src="img/Rethinking_Imaginary/addition.png"/>
       </figure>
 	  
 	  <p>As an analogy, imagine walking in some direction for a period of time. When you decide to change directions, your final position can be found by connecting your paths together.</p>
@@ -85,7 +84,7 @@
 						class="margin-toggle"/> <span class="marginnote">
 				Multiplying a 2D point by a real number.
 						</span>
-        <img src="img/multiples.png"/>
+        <img src="img/Rethinking_Imaginary/multiples.png"/>
       </figure>
 	  
    </section>
@@ -102,7 +101,7 @@
 						class="margin-toggle"/> <span class="marginnote">
 					Rotating a number in 2D.
 						</span>
-			<img src="img/complex_rotation.jpg"/>
+			<img src="img/Rethinking_Imaginary/complex_rotation.jpg"/>
     </figure>
 	  
 	<p>This allows us to decompose any point. For example:</p>
@@ -139,7 +138,7 @@
 							class="margin-toggle"/> <span class="marginnote">
 						Rotating from positive to negative.
 							</span>
-					<img src="img/rotate.png"/>
+					<img src="img/Rethinking_Imaginary/rotate.png"/>
 		</figure>
 	  
 	</section>
@@ -147,9 +146,9 @@
    <section>
 		<h2>A Missing Detail</h2>
 		<p>When we rotated, we used a unit for rotation, but didn't define it precisely. Now we will solidify this idea.</p>
-		<p>It is important to remember that when we multiply two real numbers, their values scale in a normal way. We didn't change this.</p>
+		<p>Remember that when we multiply two real numbers, their values scale in a regular way.</p>
 
-		<p>Since every point can be broken down into a radius and its rotation, the multiplication of two points can also be broken down:</p>
+		<p>Since every point can be broken down into a radius and a rotation, the product of two points can also be broken down:</p>
 		
 		<ul>A = 10&times(1&deg Rotation)<sup>3</sup></ul>
 		<ul>B = 5&times(1&deg Rotation)<sup>10</sup></ul>
@@ -165,7 +164,7 @@
 							class="margin-toggle"/> <span class="marginnote">
 						Multiplication of any two points.
 							</span>
-					<img src="img/multiply.png"/>
+					<img src="img/Rethinking_Imaginary/multiply.png"/>
 		</figure>
 
   		<p>In summary, angles add and radii multiply.</p>
@@ -182,7 +181,7 @@
 							class="margin-toggle"/> <span class="marginnote">
 						Exponentiation adds angles and multiplies radii.
 							</span>
-					<img src="img/complexExponential.png"/>
+					<img src="img/Rethinking_Imaginary/complexExponential.png"/>
 		</figure>
 
   		<p>Therefore, a number purely for rotation would need a radius of 1, since 1x1 = 1.</p>
@@ -191,7 +190,7 @@
 
    <section>
 		<h2>The Square Root of Negative One</h2>
-		<p>As a result of the previous section, the exact square root of -1 would be a line with a radius of 1 that was rotated by ninety degrees:</p>
+		<p>As a result of the previous section, the exact square root of -1 would be a point with a radius of 1 that was rotated by ninety degrees:</p>
 
 		<ul>1&times(90&deg Rotation)&times1&times(90&deg Rotation) = 1&times(180&deg Rotation) = -1</ul>
 
@@ -201,7 +200,7 @@
 
    <section>
 		<h2>Our System in Nature</h2>
-		<p>Some readers may recognize the spiral from the previous section.</p>
+		<p>You might recognize the spiral from the previous section.</p>
 		<p>It turns out that our system shows up everywhere in nature:</p>
 
 		<figure>
@@ -211,15 +210,16 @@
 							class="margin-toggle"/> <span class="marginnote">
 						There is a deep connection between exponentiation and balance in our world.
 							</span>
-					<img src="img/logarithmic_spiral.jpg"/>
+					<img src="img/Rethinking_Imaginary/logarithmic_spiral.jpg"/>
 		</figure>
 
 	</section>
 
    <section>
 		<h2>Converting to a Coordinate System</h2>
-		<p>The 2D system introduced with a radius and angle is formally known as the <strong>polar coordinates</strong> and has applications beyond the complex numbers since it simplifies working with circles and spheres.</p>
-		<p>The polar coordinate system can be converted into the typical, textbook way of working with complex numbers by splitting the radius into its horizontal and vertical coordinates.</p>
+		<p>Using a radius and an angle to describe two dimensions is formally known as the <strong>polar coordinate</strong> system.</p>
+		<p>This system has applications beyond the complex numbers since it simplifies working with circles, spirals and spheres, which are very fundamental objects in our world.</p>
+		<p>Polar coordinates can be converted into the typical, textbook way of working with complex numbers by splitting the radius into its horizontal and vertical components.</p>
 		<p>Since we found out that <strong>i</strong> is unit length on the vertical axis, this means that any 2D point has a component that is real and a component that is made up of i.</p>
 
 		<figure>
@@ -229,7 +229,7 @@
 							class="margin-toggle"/> <span class="marginnote">
 						Thinking about our system in coordinates. We label the unit 90 degree rotation as i.
 							</span>
-					<img src="img/Euler.png"/>
+					<img src="img/Rethinking_Imaginary/Euler.png"/>
 		</figure>
 
 	</section>
@@ -237,10 +237,10 @@
    <section>
 		<h2>Conclusion</h2>
 		<p>We now have a different view of what it means to be negative, in terms of <strong>angles</strong> rather than sign.</p>
-		<p>To find a square root of a negative, we need a new definition of multiplication which includes <strong>rotation</strong>.</p>
-		<p>With a new definition of multiplication, exponentiation is also redefined. Not only can exponentiation repeat multiplication, it can also repeat rotations.</p>
+		<p>To find a square root of a negative, we need a <strng>new</strong> definition of multiplication which includes <strong>rotation</strong>.</p>
+		<p>With a new way to multiply, exponentiation is also redefined. Not only can exponentiation repeat multiplication, it can also repeat rotations.</p>
 		<p>All together, this makes the complex number system an excellent tool for describing phenomena in two dimensions.</p>
-		<p>Most importantly, we found out that our natural world is filled with complex numbers.</p>
+		<p>Most importantly, we found out that nature is filled with complex numbers and that they are far from imaginary.</p>
 
 		<figure>
 			<label 	for="flower" 
@@ -249,14 +249,15 @@
 							class="margin-toggle"/> <span class="marginnote">
 						A rose outlined by exponentiation in our system.
 							</span>
-					<img src="img/flower.jpg"/>
+					<img src="img/Rethinking_Imaginary/flower.jpg"/>
 		</figure>
 
 	</section>
 
 	<section>
 		<h2>Future Work</h2>
-		<p>In future posts, we will talk about the connection between complex numbers and fractals.</p>
+		<p>In future posts, we will talk about the connection between complex numbers, chaos theory and fractals.</p>
+		<p>We will also learn that there is no reason to stop in 2D by introducing the next type of number system: Quarternions</p>
 
 		<figure>
 			<label 	for="mandelbrot" 
@@ -265,10 +266,10 @@
 							class="margin-toggle"/> <span class="marginnote">
 						A fractal world called the Mandelbrot set. <a href=" http://entheogen02.deviantart.com/">Credit</a> to online artist entheogen02.
 							</span>
-					<img src="img/mandelbrot.jpg"/>
+					<img src="img/Rethinking_Imaginary/mandelbrot.jpg"/>
 		</figure>
 
-		<p>Your <a href="https://www.facebook.com/funSimpleDiscoveries/">feedback</a> is appreciated!</p>
+		<p>Thanks for reading my first post. Your <a href="https://www.facebook.com/funSimpleDiscoveries/">feedback</a> is appreciated. Never feel afraid to ask questions!</p>
 	</section>
 
     
